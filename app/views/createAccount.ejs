@@ -1,0 +1,14 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/signup_page.css">
+<div class="wrapper">
+  <a href="/"><img src="/img/homepage.png" width="15%"  ></img></a>
+  <p>
+        <form action="/account/create" method="post">
+            <input type="text" placeholder="Username" name="usrname"><br>
+            <input type="password" placeholder="Password" name="password"><br>
+            <input type="submit" value="Create account">
+        </form>
+	<a class="login_link" href="/account/login">Already have an account?</a>
+  </p>
+</div>
+<% include partials/footer %>

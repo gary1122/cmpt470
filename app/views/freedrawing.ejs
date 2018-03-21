@@ -1,0 +1,20 @@
+<% include partials/header %>
+    <link rel="stylesheet" href="/css/draw.css">
+
+	  <div class="top-bar">
+			  <img id="save-btn" src="/img/save.png" height="40" width="40"></img>
+        <img id="undo-btn" src="/img/undo.png" height="40" width="40"></img>
+        <img id="clear-btn" src="/img/clear.png" height="40" width="40"></img>
+        <input type="color" id="color-picker">
+        <input type="range" id="brush-size" min="1" max="50" value="10">
+
+        <a href="/" id="home-btn" >Homepage</a>
+        <a class="reg_link" href="/account/create">Wanna join and play?</a>
+    </div>
+
+    <canvas id="draw"></canvas>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/draw.js"></script>
+
+<% include partials/footer %>

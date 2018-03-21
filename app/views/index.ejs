@@ -1,0 +1,17 @@
+<% include partials/header %>
+    <link rel="stylesheet" href="css/homepage.css">
+    <div class="wrapper">
+      <h1>Welcome to the Drawing Game</h1>
+      <form action="/account/login" method="get">
+          <input class="button" type="submit" value="Login"/>
+      </form>
+      <form action="/account/create" method="get">
+          <input class="button" type="submit" value="Sign up" />
+      </form>
+
+      <form action="/freedrawing" method="get">
+          <input class="button" type="submit" value="Try It Out" />
+      </form>
+    </div>
+
+<% include partials/footer %>

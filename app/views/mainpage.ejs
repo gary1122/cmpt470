@@ -1,0 +1,91 @@
+<% include partials/header %>
+
+<link rel="stylesheet" href="/css/mainpage.css">
+<link rel="stylesheet" href="/css/chat.css">
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket.js"></script>
+<script src="/js/protocol.js"></script>
+<script src="/js/canvas.js"></script>
+<script src="/js/timer.js"></script>
+
+
+<div id="top-nav"></div>
+  <a href="/"><img id="welcom-icon" src="/img/welcom.png" height="50" width="50"></img></a>
+  <h1 id="welcom">Welcome <span id="usrname"><%= username%></span>!  You are in <span id="session-name">The Game Lobby</span></h1>
+
+  <div id="free-btn">
+    <form action="/game/draw" method="get">
+        <input class="logout" type="submit" value="Go Free Drawing"/>
+    </form>
+  </div>
+  <div id="greeting">
+      <form action="/account/logout" method="get">
+          <input class="logout" type="submit" value="Log out"/>
+      </form>
+  </div>
+
+
+
+<!--<iframe width="1000" height="600" src="/game/draw" style="-webkit-transform:scale(0.8);-moz-transform-scale(0.8);"></iframe>-->
+<div id="mainfunctions">
+  <div id="drawing-session">
+    <canvas id="drawing" style="border: 5px solid #7c795d; margin: 100px; "></canvas>
+    <div id="guessbox">
+      <form id="set-answer-form" action="">
+         <input id="setAnswer" type="guess" autocomplete="off" placeholder="Set your answer..."/><button class="myButton" id="set-answer-btn">Set</button>
+       </form>
+
+      <form id="guess-anser-form" action="">
+         <input id="guessAnser" type="guess" autocomplete="off" placeholder="Enter your answer..."/><button class="myButton" id="guess-answer-btn">Guess</button>
+       </form>
+
+       <h1 id="lobby-show">Make Some Magic Here!</h1>
+    </div>
+
+    <!--<button id="resetcanvas" >clear</button>-->
+
+    <div id="answer-holder" style="display: none">The word is: <strong id="answer-word"></strong></div>
+
+    <div id='status' style=" margin-top:-100;">
+
+      <p>Its <strong id="turn"></strong>'s turn to Draw</p>
+	    <p>Time: <strong id="clock"></strong></p>
+
+      <p style="font-weight: bold; font-size: 30px">Score: <strong id='score'></strong><p>
+    </div>
+  </div>
+
+  <div id="gameSession">
+    <form id="new-game-form" action="">
+      <input id="newGame" type="text" placeholder="Input a name for new game.." autocomplete="off" /><button class="myButton" id="new-game-btn">Create</button>
+    </form>
+
+    <form id="join-game-form" action="">
+      <input id="joinGame" type="text" autocomplete="off" placeholder="Enter an existing game name..."/><button class="myButton" id="join-game-btn">Join</button>
+    </form>
+
+
+    <div id="gamelist-session">
+      <button id="gamelist-btn" onclick="">Get Game List</button>
+      <table id="gamelist"> </table>
+    </div>
+
+    <div id='chatbox'>
+      <div id='textArea'>
+          <ul id="messages"></ul>
+      </div>
+        <form id="chat-form" action="">
+          <input id="m" style="margin:0;" type="text" placeholder="Type Message..." autocomplete="off" /><button class="myButton" id="chat-btn">Send</button>
+        </form>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/chat.js"></script>
+<script src="/js/gamesession.js"></script>
+
+
+<% include partials/footer %>

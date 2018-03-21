@@ -1,0 +1,1 @@
+var GameSocket = io.connect();

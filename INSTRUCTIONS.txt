@@ -1,0 +1,16 @@
+Using npm install:
+	If using windows, certain npm commands will throw an error "npm ERR! EPROTO: protocol error...". To resolve, include --no-bin-links flag into the command.
+
+Running server:
+	To start the server, use the command "nodemon index.js" or which ever file contains the root app.
+
+Restarting server:
+	Use "rs" command
+
+Stopping server:
+	Press Ctrl + C to stop, to kill all processes use "sudo kill -9 $(ps aux | grep '\snode\s' | awk '{print $2}')"
+
+Starting/Stopping/Restarting database:
+	"sudo service mongodb start"
+	"sudo service mongodb stop"
+	"sudo service mongodb restart"

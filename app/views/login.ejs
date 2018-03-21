@@ -1,0 +1,14 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/loginpage.css">
+<div class="wrapper">
+  <a href="/"><img src="/img/login_img.png" width="20%"  ></img></a>
+  <p>
+        <form action="/account/login" method="post">
+            <input type="text" placeholder="Username" name="usrname"><br>
+            <input type="password" placeholder="Password" name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+        <a class="reg_link" href="/account/create">Not Registered Yet?</a>
+  </p>
+</div>
+<% include partials/footer %>

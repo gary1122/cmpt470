@@ -1,0 +1,6 @@
+expressjs_version/.vagrant/
+expressjs_version/app/.dbshell
+.vagrant/
+.dbshell
+app/nohup.out
+app/node_modules/
